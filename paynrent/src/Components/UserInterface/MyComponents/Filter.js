@@ -31,6 +31,7 @@ const Filter = (props) => {
         filter={...filter,'segment':segment}
         setFilterList(filter)
         props.filterOperations(filter)
+        
     }
 
     const handleFuelType=(event)=>{

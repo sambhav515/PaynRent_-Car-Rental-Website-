@@ -21,11 +21,7 @@ router.post('/categorysubmit',upload.single('icon'),function(req, res, next) {
 
         res.status(200).json({status:true,message:'Category Submitted Successfully'})
      }
-
-
-
     })
-  
 });
 
 

@@ -117,7 +117,7 @@ export default function VehicleComponent(props) {
                 background: "linear-gradient(270deg,#1caba2,20%,#1c7fab)",
               }}
             >
-              Book &gt;
+              Book
             </Button>
           </span>
         </div>
