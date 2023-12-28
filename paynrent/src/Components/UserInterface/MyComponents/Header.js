@@ -6,12 +6,14 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { getData,postData,ServerURL } from '../../Services/FetchNodeServices';
+import { useNavigate } from "react-router-dom";
 
 export default function Header(props){
    const [categories,setCategories]=useState([])
    const [subCategories,setSubCategories]=useState([])
    const [anchorEl, setAnchorEl] =useState(null)
    const open = Boolean(anchorEl);
+   var navigate=useNavigate()
    const fetchAllSubcategory=async(cid)=>{
     var body={categoryid:cid}
     var response=await postData('user/fetch_all_subcategory_by_category',body)
@@ -26,6 +28,9 @@ export default function Header(props){
     setAnchorEl(event.currentTarget)
 
 
+   }
+   const handleAdmin=()=>{
+    navigate('/adminlogin')
    }
    const handleClose=()=>{
     setAnchorEl(null)
@@ -78,7 +83,7 @@ export default function Header(props){
               </Menu>
          </Box>
          
-        <Button color="inherit">Login/Signup</Button>
+        <Button onClick={handleAdmin} color="inherit">Admin Login</Button>
       </Toolbar>
     </AppBar>
   </Box>)

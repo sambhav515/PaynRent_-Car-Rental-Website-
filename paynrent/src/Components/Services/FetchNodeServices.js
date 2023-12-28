@@ -1,5 +1,6 @@
 import axios from "axios";
-const ServerURL = "http://localhost:5000";
+//const ServerURL = "http://localhost:5000";
+const ServerURL = "https://paynrent-backend.onrender.com";
 
 const getData = async (url) => {
   try {

@@ -60,7 +60,7 @@ const PaymentGateway = (props) => {
      
       alert(response.razorpay_payment_id)
       alert("Booking Confirmed")
-       window.location.href= `/home`
+       window.location.href= `/`
        
         
     },
